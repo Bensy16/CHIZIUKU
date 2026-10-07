@@ -1,0 +1,107 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // Declaring the variables of different types
+    int age = 22;
+    double bounty = 67.67;
+    float weight = 55.67f;
+    char grade = 'S';
+    bool isStudent = true;
+    string name = "Bench";
+
+    // Getting output using cout
+    cout << "Name: " << name << endl;
+    cout << "Age: " << age << endl;
+    cout << "Bounty: " << bounty << endl;
+    cout << "Weight: " << weight << endl;
+    cout << "Class: " << grade << endl;
+    cout << "Is Student? " << isStudent << endl;
+
+    // Getting input using cin
+    string userCity;
+    cout << "\nEnter your city: ";
+    cin >> userCity;
+
+    // Reading a full line (including spaces)
+    cin.ignore(); // Clears leftover newline character from previous cin
+    string fullSentence;
+    cout << "Enter a sentence about yourself: ";
+    getline(cin, fullSentence); // Read the entire line
+    cout << "You said: " << fullSentence << endl;
+
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // 1. If/else if/else condition
+    int score;
+    cout << "Enter your exam score: ";
+    cin >> score;
+
+    if (score >= 90) {
+        cout << "Grade: A" << endl;
+    } else if (score >= 80) {
+        cout << "Grade: B" << endl;
+    } else if (score >= 70) {
+        cout << "Grade: C" << endl;
+    } else {
+        cout << "Grade: F" << endl;
+    }
+
+    // 2. Switch case
+    int day;
+    cout << "\nEnter a day number (1-7): ";
+    cin >> day;
+
+    switch (day) {
+        case 1: cout << "Monday" << endl; break;
+        case 2: cout << "Tuesday" << endl; break;
+        case 3: cout << "Wednesday" << endl; break;
+        case 4: cout << "Thursday" << endl; break;
+        case 5: cout << "Friday" << endl; break;
+        case 6: cout << "Saturday" << endl; break;
+        case 7: cout << "Sunday" << endl; break;
+        default: cout << "Invalid day" << endl; break;
+    }
+
+    // 3. For loop
+    cout << "\nCounting 1 to 5 with a for loop: " << endl;
+    for (int i = 1; i <= 5; i++) {
+        cout << i << " ";
+    }
+    cout << endl;
+
+    // 4. While loop
+    cout << "\nCounting down from 5 with a while loop: " << endl;
+    int n = 5; 
+    while (n > 0) {
+        cout << n << " "; 
+        n--; 
+    }
+    cout << endl;
+
+    // 5. Do-while loop
+    int x =0;
+    do {
+        cout << "x = " << x << endl;
+        x++;
+    } while (x < 3);
+
+    // 6. Break and Continue
+    cout << "\nSkipping 3 using continue, stopping at 7 using break: " << endl;
+    for (int i = 1; i <= 10; i++) {
+        if (i == 3) continue;
+        if (i == 7) break;
+        cout << i << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
